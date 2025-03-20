@@ -18,10 +18,10 @@ Required API keys:
 - OpenAI API
 
 How to Use:
-"Option 1: Process Youtube Video",
-"Option 2: Ask Bot Question",
-"Option 3: Process a Youtube Channel",
-"Option 4: See Table information",
-"Option 5: See Chroma DB information[Vector Information]",
-"Option 6: Add to .env",
-"Option 7: Print .env"
+- "Option 1: Process Youtube Video",
+- "Option 2: Ask Bot Question",
+- "Option 3: Process a Youtube Channel",
+- "Option 4: See Table information",
+- "Option 5: See Chroma DB information[Vector Information]",
+- "Option 6: Add to .env",
+- "Option 7: Print .env"

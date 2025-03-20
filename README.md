@@ -1,6 +1,6 @@
-# YouTube Chatbot Project
+# SpotVid: YouTube video Chatbot Project
 
-A system to analyze YouTube channels and provide AI-powered Q&A with video context.
+A system to analyze YouTube videos and provide AI-powered Q&A with video context.
 
 ## Features
 - YouTube channel video scraping

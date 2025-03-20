@@ -57,10 +57,10 @@ def print_env_file():
 
 def get_user_choice():
     options = {
-        "1": "Option 1: Process Youtube Video",
+        "1": "Option 1: Process Youtube Video by Video Id",
         "2": "Option 2: Ask Bot Question",
-        "3": "Option 3: Process a Youtube Channel",
-        "4": "Option 4: See Table information",
+        "3": "Option 3: Process a Youtube video by Channel Id",
+        "4": "Option 4: See existing Table information",
         "5": "Option 5: See Chroma DB information[Vector Information]",
         "6": "Option 6: Add to .env",
         "7": "Option 7: Print .env"

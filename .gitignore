@@ -3,3 +3,4 @@ venv
 .idea
 temp-folder
 videos.db
+*.pyc

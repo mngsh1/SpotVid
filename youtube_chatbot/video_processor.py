@@ -47,7 +47,7 @@ def process_video(video_id):
     # Step 3: Generate full video summary
     summary_chain = load_summarize_chain(llm, chain_type="map_reduce")
     docs = [Document(page_content=full_text)]
-    summary = summary_chain.run(docs)
+    summary = summary_chain.invoke(docs)
 
     session = Session()
     try:

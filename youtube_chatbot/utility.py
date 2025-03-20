@@ -137,7 +137,7 @@ def merge_transcript_text(transcript):
     return merged_text.strip(), segment_map
 
 
-def split_text_with_metadata(text, segment_map, chunk_size=500, overlap=50):
+def split_text_with_metadata(text, segment_map, chunk_size=1000, overlap=50):
     """Use LangChain's text splitter while mapping to original timestamps."""
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=overlap)
     chunks = text_splitter.split_text(text)
@@ -173,7 +173,8 @@ def get_video_by_id_from_db(video_id) -> Video:
     session = Session()
     try:
         video = session.query(Video).filter_by(id=video_id).first()
-        print(f"Video Found in DB: {video.print_details()}")
+        if video:
+            print(f"Video Found in DB: {video.print_details()}")
         return video
     finally:
         session.close()

@@ -73,7 +73,7 @@ def get_video_by_id_from_api(video_id):
         return {}
     video_data = response['items'][0]
     return {
-        'videoId': video_id,
+        'video_id': video_id,
         'length': isodate.parse_duration(video_data['contentDetails']['duration']).total_seconds(),
         'title': video_data['snippet']['title']
     }

@@ -1,9 +1,10 @@
-import requests
-import os
-from .database import Session, Video
-from chromadb import PersistentClient
 import json
+import os
+
+from chromadb import PersistentClient
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+from .database import Video, retrieve_from_db
 
 
 def append_response_to_json(response, filename='data.json', append=False, directory='temp-folder'):
@@ -170,11 +171,5 @@ def get_video_by_id_from_db(video_id) -> Video:
      :param video_id: The ID of the video to fetch
      :return: The Video object if found, else None
      """
-    session = Session()
-    try:
-        video = session.query(Video).filter_by(id=video_id).first()
-        if video:
-            print(f"Video Found in DB: {video.print_details()}")
-        return video
-    finally:
-        session.close()
+    return retrieve_from_db(video_id=video_id)
+

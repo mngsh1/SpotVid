@@ -3,5 +3,6 @@ venv
 .idea
 temp-folder
 videos.db
-*/__pycache__/*
+youtube_chatbot/__pycache__
 
+youtube_chatbot/.DS_Store
